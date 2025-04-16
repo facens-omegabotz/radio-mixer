@@ -1,11 +1,13 @@
 /*
  * RADIO MIXER FOR 2.4 GHz TX4 CONTROLLER
  *
- * 
  * OBS. INTERNA: ESCRITO COM BASE NO RECEPTOR E TRANSMISSOR DO
- * CONTROLE COM O ADESIVO DA NUBANK.
+ * CONTROLE COM O ADESIVO DA ROBOTBULLS + MOTORES N20 500RPM.
  * @Authors: Lucas Tomazeli, Renato Júnior, Felipe Mastromauro
  */
+
+// TODO: Corrigir eventuais travamentos e permitir virar com 
+// o gatilho completamente apertado.
 
 #include <Servo.h>
 
@@ -27,9 +29,10 @@ Servo motorB;
 #define DEBUG 1
 #define DEADZONE 20
 #define TIMEOUT 50000
-#define UPPER_PULSE 2000
+
 #define LOWER_PULSE 1020
 #define MIDDLE_PULSE 1510
+#define UPPER_PULSE 2000
 
 #define interval 5000
 
@@ -44,8 +47,6 @@ Servo motorB;
 #define MOTOR_MIDDLE_POINT 1500
 #define MOTOR_MIDDLE_UPPER_POINT 1850
 #define MOTOR_UPPER_POINT 2200
-
-
 
 // GLOBALS
 
